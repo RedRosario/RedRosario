@@ -49,27 +49,29 @@
       font-weight: bold;
     }
 
-    @keyframes blink {
-      0%, 100% { box-shadow: 0 0 20px #25D366; transform: scale(1); }
-      50% { box-shadow: 0 0 40px #25D366; transform: scale(1.05); }
+    @keyframes pulso {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 20px #25D366; }
+      50% { transform: scale(1.07); box-shadow: 0 0 40px #25D366; }
     }
 
     .button-whatsapp {
-      margin-top: 0px;
+      margin-top: 10px;
       background-color: #25D366;
       color: white;
-      padding: 20px 40px;
-      border: none;
-      border-radius: 30px;
-      font-size: 22px;
+      padding: 22px 45px;
+      border: 4px double white;
+      border-radius: 40px;
+      font-size: 26px;
       cursor: pointer;
       text-decoration: none;
       display: inline-block;
-      animation: blink 1.2s infinite;
+      animation: pulso 1.4s infinite ease-in-out;
+      transition: all 0.3s ease;
     }
 
     .button-whatsapp:hover {
-      opacity: 0.9;
+      background-color: #1eb25a;
+      transform: scale(1.1);
     }
 
     .footer {
